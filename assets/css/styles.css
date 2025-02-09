@@ -403,10 +403,13 @@ footer {
 
 .footer-nav ul {
     display: flex;
-    gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.footer-nav ul li {
+    margin: 0 1rem;
 }
 
 .footer-nav a {
@@ -515,4 +518,22 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+.booking-help {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    color: #666;
+    font-size: 1rem;
+}
+
+.booking-help a {
+    color: #f9ce85;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.booking-help a:hover {
+    opacity: 0.8;
 }
