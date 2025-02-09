@@ -389,8 +389,9 @@ footer {
     background: #000;
     padding: 1rem 0;
     border-top: 1px solid #333;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     z-index: 100;
 }
@@ -478,7 +479,8 @@ footer {
     width: 70%;
     text-align: center;
     position: relative;
-    /* For positioning the decorative quote */
+    margin-bottom: 15rem;
+    /* Increased from 10rem to 15rem */
 }
 
 .quote-section::before {
@@ -488,6 +490,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20rem;
+    /* Back to original size */
     color: #f9ce85;
     opacity: 0.03;
     font-family: 'Helvetica', Arial, sans-serif;
@@ -497,11 +500,13 @@ footer {
 
 .quote-text {
     font-size: 1.8rem;
+    /* Back to original size */
     line-height: 1.4;
     color: #f9ce85;
     font-family: 'Helvetica', Arial, sans-serif;
     font-weight: 300;
     margin-bottom: 1.5rem;
+    /* Back to original size */
     font-style: italic;
     position: relative;
     z-index: 1;
@@ -510,6 +515,7 @@ footer {
 .quote-author {
     color: #fff;
     font-size: 1.1rem;
+    /* Back to original size */
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 0.5px;
     position: relative;
@@ -536,4 +542,14 @@ html {
 
 .booking-help a:hover {
     opacity: 0.8;
+}
+
+/* Update viewport styles for mobile */
+@media screen and (max-width: 1200px) {
+    body {
+        transform: scale(0.6);
+        transform-origin: top center;
+        min-height: 160vh;
+        /* Increased from 140vh to 160vh to accommodate more space */
+    }
 }
