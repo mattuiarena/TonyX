@@ -1,0 +1,8 @@
+project-root/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── index.html
+├── robots.txt
+└── sitemap.xml 

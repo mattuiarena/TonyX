@@ -1,0 +1,518 @@
+/* Import Helvetica fonts */
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../helvetica/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../helvetica/Helvetica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../helvetica/Helvetica-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Add Roboto Mono font import at the top */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+    /* This pushes the footer to the bottom */
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Hero Image styles */
+.hero-image {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.full-width-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.heading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Helvetica', Arial, sans-serif;
+    letter-spacing: 5px;
+}
+
+.premium-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 0.05rem;
+    color: #FFD700;
+    text-shadow:
+        0 0 10px rgba(255, 215, 0, 0.3),
+        0 0 20px rgba(255, 215, 0, 0.2),
+        2px 2px 2px rgba(206, 148, 24, 0.8),
+        -2px -2px 2px rgba(255, 236, 147, 0.8);
+    position: relative;
+}
+
+.subtext {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #FFD700;
+    text-shadow:
+        0 0 8px rgba(255, 215, 0, 0.3),
+        0 0 15px rgba(255, 215, 0, 0.2),
+        1px 1px 2px rgba(206, 148, 24, 0.8),
+        -1px -1px 2px rgba(255, 236, 147, 0.8);
+}
+
+/* Content Section styles */
+.content-container {
+    width: 50%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.content-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #f9ce85;
+    line-height: 1.2;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        0 4px 8px rgba(255, 215, 0, 0.3),
+        0 8px 16px rgba(255, 215, 0, 0.2);
+}
+
+.content-text {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+.content-text p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.content-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Add these new styles */
+.machine-section {
+    margin-top: 6rem;
+    /* Add more space between sections */
+}
+
+.features-list {
+    margin: 2rem 0;
+}
+
+.features-list p {
+    padding: 0.8rem 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.features-list p::before {
+    content: "✓";
+    color: #f9ce85;
+    font-size: 2.2rem;
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    font-weight: bold;
+    transform: none;
+    line-height: 1;
+}
+
+.feature-title {
+    font-weight: bold;
+    color: #f9ce85;
+    font-size: 1.4rem;
+    font-family: 'Helvetica', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.feature-description {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.emphasis-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    opacity: 1;
+    margin-top: 2rem;
+    color: #f9ce85;
+    /* Match the gold color */
+}
+
+/* Pricing Section Styles */
+.pricing-section {
+    width: 85%;
+    /* Slightly reduced width */
+    margin: 6rem auto;
+    /* Reduced margin */
+}
+
+/* Pricing Table Styles */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.pricing-table th {
+    background: #000;
+    color: #f9ce85;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.5rem 1.2rem;
+}
+
+.pricing-table th .skull {
+    color: #f9ce85;
+    vertical-align: middle;
+}
+
+.pricing-table th .skull i {
+    font-size: 2.4rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.pricing-table th .skull i:last-child {
+    margin-right: 0.8rem;
+}
+
+.pricing-table .feature-name {
+    color: #f9ce85;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #0a0a0a;
+    width: 220px;
+}
+
+.pricing-table td {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 1.5rem 1.2rem;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+.pricing-table td.premium {
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.pricing-table th.premium {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.pricing-row {
+    background: #000;
+}
+
+.pricing-row td {
+    padding: 2rem 1.2rem;
+}
+
+.pricing-row .price {
+    color: #f9ce85;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.pricing-row .price .price-suffix {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* Add new styles for feature rows alignment */
+.features {
+    margin: 1.5rem 0;
+    /* Reduced from 2rem */
+    position: relative;
+}
+
+.cta-button {
+    background: transparent;
+    border: 2px solid #f9ce85;
+    color: #f9ce85;
+    padding: 0.8rem 1.5rem;
+    /* Reduced padding */
+    font-size: 1rem;
+    /* Reduced from 1.1rem */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background: #f9ce85;
+    color: #000;
+}
+
+.cta-button.premium {
+    background: #f9ce85;
+    color: #000;
+}
+
+.cta-button.premium:hover {
+    background: transparent;
+    color: #f9ce85;
+}
+
+/* Add styles for checkmark in pricing table */
+.pricing-table td .check {
+    position: relative;
+    padding-left: 3rem;
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+.pricing-table td .check::before {
+    content: "✓";
+    color: #f9ce85;
+    font-size: 2.2rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Keep these styles for the cross mark */
+.pricing-table td .cross {
+    position: relative;
+    padding-left: 3rem;
+    display: inline-block;
+    color: #666;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+.pricing-table td .cross::before {
+    content: "✕";
+    color: #444;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Sticky Footer Styles */
+.sticky-footer {
+    background: #000;
+    padding: 1rem 0;
+    border-top: 1px solid #333;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a {
+    color: #f9ce85;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-nav a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Scheduling Section Styles */
+.scheduling-section {
+    margin: 4rem auto;
+    /* Reduced from 8rem */
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid #333;
+}
+
+.calendar-container iframe {
+    border-radius: 8px;
+    background: #fff;
+    /* Calendar needs light background */
+}
+
+.email-subtext {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.email-subtext a {
+    color: #f9ce85;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.email-subtext a:hover {
+    opacity: 0.8;
+}
+
+/* Quote Section Styles */
+.quote-section {
+    margin: 6rem auto;
+    width: 70%;
+    text-align: center;
+    position: relative;
+    /* For positioning the decorative quote */
+}
+
+.quote-section::before {
+    content: '"';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+    color: #f9ce85;
+    opacity: 0.03;
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 0;
+    z-index: -1;
+}
+
+.quote-text {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: #f9ce85;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-author {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
