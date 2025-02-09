@@ -550,17 +550,16 @@ html {
     html,
     body {
         width: 1200px;
-        /* Set fixed width to match desktop */
-        margin: 0 auto;
-        /* Center horizontally */
+        margin: 0;
+        /* Remove auto margin */
         overflow-x: hidden;
         /* Hide horizontal scrollbar */
     }
 
     body {
         transform: scale(0.6);
-        transform-origin: top center;
+        transform-origin: top left;
+        /* Change from top center to top left */
         min-height: 160vh;
-        /* Increased from 140vh to 160vh to accommodate more space */
     }
 }
