@@ -68,6 +68,7 @@ footer {
 .hero-image {
     width: 70%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
@@ -75,43 +76,39 @@ footer {
 }
 
 .full-width-image {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
 }
 
 .heading-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Helvetica', Arial, sans-serif;
-    letter-spacing: 5px;
+    margin-top: 2rem;
 }
 
-.premium-heading {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 0.05rem;
-    color: #FFD700;
-    text-shadow:
-        0 0 10px rgba(255, 215, 0, 0.3),
-        0 0 20px rgba(255, 215, 0, 0.2),
-        2px 2px 2px rgba(206, 148, 24, 0.8),
-        -2px -2px 2px rgba(255, 236, 147, 0.8);
-    position: relative;
+.hero-heading {
+    margin-bottom: 0.5rem;
 }
 
 .subtext {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: 2px;
-    color: #FFD700;
-    text-shadow:
-        0 0 8px rgba(255, 215, 0, 0.3),
-        0 0 15px rgba(255, 215, 0, 0.2),
-        1px 1px 2px rgba(206, 148, 24, 0.8),
-        -1px -1px 2px rgba(255, 236, 147, 0.8);
+    color: #f9ce85;
+    font-family: 'Helvetica', Arial, sans-serif;
+    margin-top: 0.5rem;
+    line-height: 1;
+}
+
+/* Section Label styles */
+.section-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #666;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 /* Content Section styles */
@@ -127,10 +124,6 @@ footer {
     margin-bottom: 2rem;
     color: #f9ce85;
     line-height: 1.2;
-    text-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.4),
-        0 4px 8px rgba(255, 215, 0, 0.3),
-        0 8px 16px rgba(255, 215, 0, 0.2);
 }
 
 .content-text {
@@ -416,10 +409,10 @@ footer {
 .footer-nav a {
     color: #f9ce85;
     text-decoration: none;
-    font-size: 1rem;
-    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    font-family: 'Helvetica', Arial, sans-serif;
     transition: opacity 0.3s ease;
-    cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .footer-nav a:hover {
@@ -513,13 +506,14 @@ footer {
 }
 
 .quote-author {
-    color: #fff;
+    color: #666;
     font-size: 1.1rem;
-    /* Back to original size */
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 0.5px;
     position: relative;
     z-index: 1;
+    margin-top: 1rem;
+    background: transparent;
 }
 
 html {
@@ -575,12 +569,21 @@ html {
         max-width: 90%;
     }
 
-    .premium-heading {
+    .heading-container {
+        margin-top: 1.5rem;
+    }
+
+    .hero-heading {
         font-size: 3rem;
     }
 
     .subtext {
-        font-size: 1.2rem;
+        font-size: 2rem;
+    }
+
+    .section-label {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
     }
 
     .content-heading {
@@ -667,16 +670,32 @@ html {
     .calendar-container {
         padding: 1rem;
     }
+
+    .summary-box {
+        width: 90%;
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .summary-content {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
-    .premium-heading {
+    .hero-heading {
         font-size: 2.5rem;
     }
 
     .subtext {
-        font-size: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
     }
 
     .content-heading {
@@ -778,9 +797,10 @@ html {
 .mobile-nav a {
     color: #f9ce85;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    font-family: 'Helvetica', Arial, sans-serif;
     transition: opacity 0.3s ease;
+    letter-spacing: 1px;
 }
 
 .mobile-nav a:hover {
@@ -810,4 +830,48 @@ html {
     .quote-section {
         margin-bottom: 5rem;
     }
+}
+
+/* Summary Box Styles */
+.summary-box {
+    background: #f9ce85;
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 3rem auto;
+    width: 70%;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.summary-content {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #000;
+    text-align: left;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .summary-box {
+        width: 90%;
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .summary-content {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+.emoji-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 500;
+    color: #000;
 }
